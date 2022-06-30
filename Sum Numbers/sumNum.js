@@ -1,11 +1,14 @@
 function calculate() {
 
-    let first = document.getElementById('firstInput');
-    let second = document.getElementById('secondInput');
+    let first = document.getElementById('firstInput').value;
+    let second = document.getElementById('secondInput').value;
+    let result = Number(first) + Number(second);
 
-    let result = Number(first.value) + Number(second.value);
     
-    let calc = document.getElementById('resultInput');
-    calc.value = result;
+    if (Number.isNaN(result)) {
+        alert('Please enter numbers!')
+    } else {
+       document.getElementById('resultInput').value = result;
+   }
 
 }
